@@ -1,4 +1,7 @@
-function Quiz() {
+
+
+
+function Quiz(handleClickFunc, handleClickVar, handleClickArr) {
     // const [currentQuestion, setCurrentQuestion] = useState(0);
     // const [score, setScore] = useState(0);
   
