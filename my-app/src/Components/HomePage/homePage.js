@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import variablesQuizData from "../../Data/variables_questions.json"; // Not able to access file correctly on webpage
-import arraysQuizData from "../../Data/arraysQuizData"; // Not able to access file correctly on webpage
-import functionsQuizData from "../../Data/functionsQuizData"; // Not able to access file correctly on webpage
+import arraysQuizData from "../../Data/arrays_questions.json"; // Not able to access file correctly on webpage
+import functionsQuizData from "../../Data/functions_questions.json"; // Not able to access file correctly on webpage
 import Quiz from "../quizPage/quizPage";
 
 function HomePage() {
