@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import variablesQuizData from "../../Data/variablesQuizData";
-import arraysQuizData from "../../Data/arraysQuizData";
-import functionsQuizData from "../../Data/functionsQuizData";
+import variablesQuizData from "../../Data/variables_questions.json"; // Not able to access file correctly on webpage
+import arraysQuizData from "../../Data/arraysQuizData"; // Not able to access file correctly on webpage
+import functionsQuizData from "../../Data/functionsQuizData"; // Not able to access file correctly on webpage
 import Quiz from "../quizPage/quizPage";
 
 function HomePage() {
@@ -36,3 +36,5 @@ function HomePage() {
     </div>
   );
 }
+
+export default HomePage;
