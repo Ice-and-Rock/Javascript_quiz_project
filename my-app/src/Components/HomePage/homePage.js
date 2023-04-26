@@ -3,6 +3,8 @@ import variablesQuizData from "../../Data/variables_questions.json";
 import arraysQuizData from "../../Data/arrays_questions.json"; 
 import functionsQuizData from "../../Data/functions_questions.json"; 
 import Quiz from "../quizPage/quizPage";
+import NavBar from "../NavBar/NavBar";
+import Logo from '../../images/V3_Logo.png';
 
 // create a new function that contains our entire App
   // return the layout of our design
@@ -13,9 +15,6 @@ import Quiz from "../quizPage/quizPage";
 
 function HomePage() {
   // assigns a new function
-
-
-
 
 
 
@@ -34,21 +33,28 @@ function HomePage() {
     }
   };
 
-  return (
-    <div>
-      {" "}
-      <h1>JavaScript Quiz</h1>
-      <button value="Variables Quiz" onClick={handleQuizData}>
+  return ( <> 
+    <header>
+      <NavBar />
+    </header>
+
+  <body>
+      <div>
         {" "}
-      </button>
-      <button value="Arrays Quiz" onClick={handleQuizData}>
-        {" "}
-      </button>
-      <button value="Functions Quiz" onClick={handleQuizData}>
-        {" "}
-      </button>
-      <Quiz quizData={quizData} quizName={quizName} />
-    </div>
+        <h1>JavaScript Quiz</h1>
+        <button value="Variables Quiz" onClick={handleQuizData}>
+          {" "}
+        </button>
+        <button value="Arrays Quiz" onClick={handleQuizData}>
+          {" "}
+        </button>
+        <button value="Functions Quiz" onClick={handleQuizData}>
+          {" "}
+        </button>
+        <Quiz quizData={quizData} quizName={quizName} />
+      </div>
+    </body>
+    </>
   );
 }
 
