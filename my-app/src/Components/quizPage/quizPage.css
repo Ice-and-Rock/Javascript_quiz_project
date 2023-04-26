@@ -1,0 +1,56 @@
+
+.QuizPage {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .QuizContainer {
+    margin-top: 2rem;
+  }
+  
+  .QuizContainer h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .QuizContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .QuizContainer li {
+    margin-bottom: 1rem;
+  }
+  
+  .QuizContainer label {
+    display: block;
+    font-size: 16px;
+  }
+  
+  .QuizContainer button {
+    margin-top: 1rem;
+  }
+  
+  .ResultsContainer {
+    margin-top: 2rem;
+  }
+  
+  .ResultsContainer h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .ResultsContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ResultsContainer li {
+    font-size: 16px;
+  }
+  
+  /* Add any additional styles for the QuizPage component here */
+  
+  

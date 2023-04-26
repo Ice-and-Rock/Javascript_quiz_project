@@ -5,8 +5,15 @@ import React, { useState } from "react";
 import variablesQuizData from "./Data/variables_questions.json";
 import arraysQuizData from "./Data/arrays_questions.json";
 import functionsQuizData from "./Data/functions_questions.json";
-import HomePage from "./Components/HomePage/homePage";
-import QuizPage from "./Components/quizPage/quizPage";
+import NavBar from "./Components/NavBar/navBar" ;
+import Quiz from "./Components/quizPage/quizPage" ;
+import "./index.css" ;
+import "./App.css" ;
+import "./Components/NavBar/navBar.css" ;
+import "./Components/quizPage/quizPage.css" ;
+import "./Components/buttons/buttons.css"
+
+
 
 function App() {
   const [quizData, setQuizData] = useState(variablesQuizData);
@@ -24,20 +31,48 @@ function App() {
     }
   };
 
-  return (
-  <HomePage/>
-    // <Router>
-    //   <Switch>
-    //     <Route exact path="/">
-    //       <HomePage handleQuizData={handleQuizData} />
-    //     </Route>
-    //     <Route path="/quizPage">
-    //       <QuizPage quizData={quizData} quizName={quizName} />
-    //     </Route>
-    //   </Switch>
-    // </Router>
+  return ( <> 
+    <header className="NavBar">
+      <NavBar />
+    </header>
+
+  <body className="App">
+      <div>
+        {" "}
+        <h1>JavaScript Quiz</h1>
+        <button classname="buttons" value="Variables Quiz" onClick={handleQuizData}>
+          {" "}
+        </button>
+        <button classname="buttons" value="Arrays Quiz" onClick={handleQuizData}>
+          {" "}
+        </button>
+        <button classname="buttons" value="Functions Quiz" onClick={handleQuizData}>
+          {" "}
+        </button>
+        <Quiz quizData={quizData} quizName={quizName} />
+      </div>
+    </body>
+    </>
   );
 }
+
+
+  // Attempted to link to another page (quiz page)
+
+  // return (
+  // <HomePage/>
+  //   <Router>
+  //     <Switch>
+  //       <Route exact path="/">
+  //         <HomePage handleQuizData={handleQuizData} />
+  //       </Route>
+  //       <Route path="/quizPage">
+  //         <QuizPage quizData={quizData} quizName={quizName} />
+  //       </Route>
+  //     </Switch>
+  //   </Router>
+  // );
+// }
 
 export default App;
 

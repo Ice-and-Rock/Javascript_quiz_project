@@ -1,21 +1,40 @@
-// HomePage.js
 
 import React from "react";
 import VarQuizButton from "../buttons/buttons";
 
-function HomePage({ handleQuizData }) {
+function HomePage() 
+
+// { handleQuizData }
+{
   return (
-    <div>
-      <h1>JavaScript Quiz</h1>
-      <button value="Variables Quiz" onClick={handleQuizData}>
-        Variables Quiz
-      </button>
-      <button value="Arrays Quiz" onClick={handleQuizData}>
-        Arrays Quiz
-      </button>
-      <button value="Functions Quiz" onClick={handleQuizData}>
-        Functions Quiz
-      </button>
+    <div className="SectionContainer">
+    <h1>JavaScript Quiz</h1>
+    <varSection>
+        <button value="Variables Quiz" >
+          Variables Quiz
+        </button>
+        <p>
+          serkjhvb srebsrtvrt
+        </p>
+    </varSection>
+
+    <arrSection>
+        <button value="Arrays Quiz" >
+          Arrays Quiz
+        </button>
+        <p>
+sgvtrbvrtb
+        </p>
+    </arrSection>
+
+    <funcSection>
+        <button value="Functions Quiz" >
+          Functions Quiz
+        </button>
+        <p>
+srbrggbtrsbt
+        </p>
+    </funcSection>
       <VarQuizButton />
     </div>
   );
