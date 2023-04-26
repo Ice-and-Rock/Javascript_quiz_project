@@ -9,7 +9,7 @@ const Quiz = ({ quizData, quizName }) => {
   return (
     <div>
       <h2>{quizName}</h2>
-      <ul>
+      {/* <ul>
         {quizData.map((question, index) => (
           <li key={index}>
             <h3>{question.question}</h3>
@@ -20,7 +20,7 @@ const Quiz = ({ quizData, quizName }) => {
             </ul>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };
