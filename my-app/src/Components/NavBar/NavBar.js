@@ -7,10 +7,10 @@ function NavBar() {
       <button>Variables</button>
       <button>Arrays</button>
       <button>Functions</button>
-      <div className="logo">
-        <img src={Logo} alt="logo" />
+      <div className="logo"> 
+        <img id="logo" src={Logo} alt="logo" />
       </div>
-      <button>Test Yourself</button>
+      
     </div>
   )
 }

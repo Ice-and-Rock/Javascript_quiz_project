@@ -18,3 +18,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #4c606d;
+}

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import variablesQuizData from "./Data/variables_questions.json";
 import arraysQuizData from "./Data/arrays_questions.json";
 import functionsQuizData from "./Data/functions_questions.json";
-import NavBar from "./Components/NavBar/navBar" ;
+import NavBar from "./Components/NavBar/NavBar" ;
 import Quiz from "./Components/quizPage/quizPage" ;
 import "./index.css" ;
 import "./App.css" ;
@@ -40,13 +40,13 @@ function App() {
       <div>
         {" "}
         <h1>JavaScript Quiz</h1>
-        <button classname="buttons" value="Variables Quiz" onClick={handleQuizData}>
+        <button  value="Variables Quiz" onClick={handleQuizData}>Variables
           {" "}
         </button>
-        <button classname="buttons" value="Arrays Quiz" onClick={handleQuizData}>
+        <button  value="Arrays Quiz" onClick={handleQuizData}>Arrays
           {" "}
         </button>
-        <button classname="buttons" value="Functions Quiz" onClick={handleQuizData}>
+        <button  value="Functions Quiz" onClick={handleQuizData}>function
           {" "}
         </button>
         <Quiz quizData={quizData} quizName={quizName} />

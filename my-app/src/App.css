@@ -8,14 +8,23 @@
     height: 100vh;
   }
   
-  .NavBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #b2bad2;
+  #logo{
+    width: 60%;
+    height: 100%;
+    margin: auto;
   }
   
+  
+  button{
+    background-color: #6CAE75;
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
   /* Add any additional styles for the NavBar component here */
   
   /* HomePage box for topics */
