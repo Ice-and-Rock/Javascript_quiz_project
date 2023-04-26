@@ -10,7 +10,9 @@ function NavBar() {
           <button>Arrays</button>
           <button>Functions</button>
         </div>
+        <div id="logoDiv">
         <img id="logo" src={Logo} alt="logo" />
+        </div>
       </div>
     </header>
   );
