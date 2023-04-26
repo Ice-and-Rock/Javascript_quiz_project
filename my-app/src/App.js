@@ -5,15 +5,13 @@ import React, { useState } from "react";
 import variablesQuizData from "./Data/variables_questions.json";
 import arraysQuizData from "./Data/arrays_questions.json";
 import functionsQuizData from "./Data/functions_questions.json";
-import NavBar from "./Components/NavBar/NavBar" ;
-import Quiz from "./Components/quizPage/quizPage" ;
-import "./index.css" ;
-import "./App.css" ;
-import "./Components/NavBar/navBar.css" ;
-import "./Components/quizPage/quizPage.css" ;
-import "./Components/buttons/buttons.css"
-
-
+import NavBar from "./Components/NavBar/NavBar";
+import Quiz from "./Components/quizPage/quizPage";
+import "./index.css";
+import "./App.css";
+import "./Components/NavBar/navBar.css";
+import "./Components/quizPage/quizPage.css";
+import "./Components/buttons/buttons.css";
 
 function App() {
   const [quizData, setQuizData] = useState(variablesQuizData);
@@ -31,98 +29,52 @@ function App() {
     }
   };
 
-  return ( <> 
-    <header className="NavBar">
-      <NavBar />
-    </header>
+  return (
+    <>
+      <header className="NavBar">
+        <NavBar />
+      </header>
 
-  <body className="App">
-      <div>
-        {" "}
-        <h1>JavaScript Quiz</h1>
-        <button  value="Variables Quiz" onClick={handleQuizData}>Variables
+      <body className="App">
+        <div>
           {" "}
-        </button>
-        <button  value="Arrays Quiz" onClick={handleQuizData}>Arrays
-          {" "}
-        </button>
-        <button  value="Functions Quiz" onClick={handleQuizData}>function
-          {" "}
-        </button>
-        <Quiz quizData={quizData} quizName={quizName} />
-      </div>
-    </body>
+          <h1>JavaScript Quiz</h1>
+          <button value="Variables Quiz" onClick={handleQuizData}>
+            Variables{" "}
+          </button>
+          <button value="Arrays Quiz" onClick={handleQuizData}>
+            Arrays{" "}
+          </button>
+          <button value="Functions Quiz" onClick={handleQuizData}>
+            function{" "}
+          </button>
+          <Quiz quizData={quizData} quizName={quizName} />
+        </div>
+      </body>
+
+      <quizQuestions>
+        <Quiz
+          quizData={require("./Data/arrays_questions.json")}
+          quizName="Arrays Quiz"
+        />
+        {/* Pass arrays_questions.json as quizData prop to Quiz component */}
+        <Quiz
+          quizData={require("./Data/functions_questions.json")}
+          quizName="Functions Quiz"
+        />
+        {/* Pass functions_questions.json as quizData prop to Quiz component */}
+        <Quiz
+          quizData={require("./Data/variables_questions.json")}
+          quizName="Variables Quiz"
+        />
+        {/* Pass variables_questions.json as quizData prop to Quiz component */}
+      </quizQuestions>
     </>
   );
 }
 
 
-  // Attempted to link to another page (quiz page)
-
-  // return (
-  // <HomePage/>
-  //   <Router>
-  //     <Switch>
-  //       <Route exact path="/">
-  //         <HomePage handleQuizData={handleQuizData} />
-  //       </Route>
-  //       <Route path="/quizPage">
-  //         <QuizPage quizData={quizData} quizName={quizName} />
-  //       </Route>
-  //     </Switch>
-  //   </Router>
-  // );
-// }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import "./App.css";
-// import React from "react";
-// import HomePage from "./Components/HomePage/homePage";
-// import NavBar from "././Components/NavBar/NavBar";
-
-// function App() {
-//   return <div>
-   
-//     <HomePage />
-//   </div>;
-// }
-
-// export default App;
 
 
