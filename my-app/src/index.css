@@ -17,11 +17,21 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
 }
-
-.NavBar {
+header{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+
+ .NavBar {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
   background-color: #4c606d;
+}
+
+#logo{
+  width: 60%;
+  height: 100%;
+  margin: auto;
 }
