@@ -35,4 +35,28 @@ header {
   height: 100%;
   margin: auto;
 }
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.row-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.row-container img{
+  margin-right: 100px;
+}
+
+.row-container button {
+  margin-top: auto;
+  margin-left: auto;
+}
+
+#main-page-heading {
+  margin: auto;
+}
