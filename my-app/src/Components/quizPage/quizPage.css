@@ -91,6 +91,10 @@
     cursor: pointer;
   }
   
+  button:hover {
+    background-color: hotpink;
+  }
+
   .correct {
     background-color: #2f922f;
   }
