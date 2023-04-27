@@ -17,6 +17,15 @@ function App() {
   const [quizData, setQuizData] = useState(variablesQuizData);
   const [quizName, setQuizName] = useState("Variables Quiz");
 
+  const changeQuizDatahandler = (data, quizName)=>{
+    setQuizData(data);
+    setQuizName(quizName);
+  }
+
+  // quizdata1 obj
+  // quizdata2 obj
+  // quizdata3 obj
+
 
   return (
     <>
@@ -33,6 +42,7 @@ function App() {
               src="https://imgs.search.brave.com/at_I0l315xw_OtEmdg-juXwRE6Rv5mgsNdUNVS4Ye8Y/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC52/cUFGaVZUZnNWTHZy/QjRtVUNoNDhRSGFF/byZwaWQ9QXBp"
               alt=""
             />
+            
             <p>
               {" "}
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -42,7 +52,7 @@ function App() {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <button value="Variables Quiz" onClick={variablesQuiz}>
+              <button value="Variables Quiz" onClick={()=>changeQuizDatahandler(variablesQuizData,'Variables')} >
                 Variables{" "}
               </button>
             </p>
@@ -62,7 +72,7 @@ function App() {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <button value="Arrays Quiz">
+              <button value="Arrays Quiz" onClick={()=>changeQuizDatahandler(variablesQuizData,'Arrays')}>
                 Arrays{" "}
               </button>
             </p>
@@ -82,7 +92,7 @@ function App() {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <button value="Functions Quiz">
+              <button value="Functions Quiz" onClick={()=>changeQuizDatahandler(variablesQuizData,'Functions')}>
                 Functions{" "}
               </button>
             </p>
