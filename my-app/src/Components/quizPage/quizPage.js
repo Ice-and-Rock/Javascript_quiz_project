@@ -6,7 +6,9 @@
 // MVP - display answer / alert correct or incorrect/show immediate result?
 
 import React, { useState } from "react";
+
 export default function Quiz() {
+
   const arraysQuizData = [
     {
       questionText: "How do you declare an empty array in JavaScript?",
@@ -63,7 +65,7 @@ export default function Quiz() {
     },
   ];
 
-  // console.log("number 2", quizData);
+  
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
@@ -83,11 +85,10 @@ export default function Quiz() {
 
   return (
     <div>
-      <p>THIS IS A TEST</p>
+     
       <div className="app">
-        {/* HINT: replace "false" with logic to display the 
-      score when the user has answered all the questions */}
-        {false ? (
+   
+        {showScore ? (
           <div className="score-section">
             {" "}
             You Scored {score} out of {arraysQuizData.length}
@@ -96,7 +97,7 @@ export default function Quiz() {
           <>
             <div className="question-section">
               <div className="question-count">
-                <span>Question 1</span>/{arraysQuizData.length}
+                <span>Question {currentQuestion + 1}</span>/{arraysQuizData.length}
               </div>
               <div className="question-text">
                 {" "}
@@ -112,7 +113,7 @@ export default function Quiz() {
                       handleAnswerButtonClick(answerOption.isCorrect)
                     }
                   >
-                    {}
+                    {answerOption.answerText}
                   </button>
                 )
               )}
