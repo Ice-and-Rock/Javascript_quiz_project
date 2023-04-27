@@ -6,7 +6,7 @@
 // MVP - display answer / alert correct or incorrect/show immediate result?
 
 import React, { useState } from "react";
-// onclick not working
+// onclick not working 
 export default function Quiz({ quizName }) {
   const arraysQuizData = [
     {
@@ -113,7 +113,7 @@ export default function Quiz({ quizName }) {
               {/*
                 The section below I am conditionally rendering a component
 
-                if arraysQuizData[currentQuestion].codeSnippet is true/not falsy
+                if arraysQuizData[currentQuestion].codeSnippet is true/not false
 
                 then render this div and text  <div>{arraysQuizData[currentQuestion].codeSnippet}</div>
               */}
