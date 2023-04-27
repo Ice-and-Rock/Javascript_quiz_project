@@ -7,8 +7,7 @@
 
 import React, { useState } from "react";
 
-export default function Quiz() {
-
+export default function Quiz({onClick}) {
   const arraysQuizData = [
     {
       questionText: "How do you declare an empty array in JavaScript?",
@@ -65,7 +64,6 @@ export default function Quiz() {
     },
   ];
 
-  
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
@@ -85,19 +83,27 @@ export default function Quiz() {
 
   return (
     <div>
-     
-      <div className="app">
-   
+      <div className="quiz">
         {showScore ? (
           <div className="score-section">
             {" "}
             You Scored {score} out of {arraysQuizData.length}
+            <button
+              onClick={() => {
+                setShowScore(false);
+                setScore(0);
+                setCurrentQuestion(0);
+              }}
+            >
+              Restart Quiz
+            </button>
           </div>
         ) : (
           <>
             <div className="question-section">
               <div className="question-count">
-                <span>Question {currentQuestion + 1}</span>/{arraysQuizData.length}
+                <span>Question {currentQuestion + 1}</span>/
+                {arraysQuizData.length}
               </div>
               <div className="question-text">
                 {" "}

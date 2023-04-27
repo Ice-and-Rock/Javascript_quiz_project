@@ -17,17 +17,6 @@ function App() {
   const [quizData, setQuizData] = useState(variablesQuizData);
   const [quizName, setQuizName] = useState("Variables Quiz");
 
-  const handleQuizData = (e) => {
-    const quizName = e.target.value;
-    setQuizName(quizName);
-    if (quizName === "Variables Quiz") {
-      setQuizData(variablesQuizData);
-    } else if (quizName === "Arrays Quiz") {
-      setQuizData(arraysQuizData);
-    } else if (quizName === "Functions Quiz") {
-      setQuizData(functionsQuizData);
-    }
-  };
 
   return (
     <>
@@ -53,7 +42,7 @@ function App() {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <button value="Variables Quiz" onClick={handleQuizData}>
+              <button value="Variables Quiz" onClick={variablesQuiz}>
                 Variables{" "}
               </button>
             </p>
@@ -73,7 +62,7 @@ function App() {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <button value="Arrays Quiz" onClick={handleQuizData}>
+              <button value="Arrays Quiz">
                 Arrays{" "}
               </button>
             </p>
@@ -93,8 +82,8 @@ function App() {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <button value="Functions Quiz" onClick={handleQuizData}>
-                function{" "}
+              <button value="Functions Quiz">
+                Functions{" "}
               </button>
             </p>
           </div>
