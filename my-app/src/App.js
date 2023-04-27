@@ -99,26 +99,13 @@ function App() {
             </p>
           </div>
 
-          <Quiz quizData={quizData} quizName={quizName} />
         </div>
       </body>
 
-      <quizQuestions>
-        <Quiz
-          quizData={require("./Data/arrays_questions.json")}
-          quizName="Arrays Quiz"
-        />
-        {/* Pass arrays_questions.json as quizData prop to Quiz component */}
-        <Quiz
-          quizData={require("./Data/functions_questions.json")}
-          quizName="Functions Quiz"
-        />
-        {/* Pass functions_questions.json as quizData prop to Quiz component */}
-        <Quiz
-          quizData={require("./Data/variables_questions.json")}
-          quizName="Variables Quiz"
-        />
-        {/* Pass variables_questions.json as quizData prop to Quiz component */}
+      <quizQuestions className= "Quiz">
+       
+          <Quiz quizData={quizData} quizName={quizName} />
+  
       </quizQuestions>
     </>
   );

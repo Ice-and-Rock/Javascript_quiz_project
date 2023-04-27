@@ -6,6 +6,8 @@
 // MVP - display answer / alert correct or incorrect/show immediate result?
 
 import React, { useState } from "react";
+export default function Quiz(){
+  
 
   const arraysQuizData = [
     
@@ -59,70 +61,37 @@ import React, { useState } from "react";
   ]
 
 
-
-const Quiz = ({ quizData, quizName }) => {
-  const [answers, setAnswers] = useState(Array(quizData.length).fill(null));
-  const [showResults, setShowResults] = useState(false);
-
-  console.log(quizData);
-
-  const handleAnswerSelect = (questionIndex, choiceIndex) => {
-    const updatedAnswers = [...answers];
-    updatedAnswers[questionIndex] = choiceIndex;
-    setAnswers(updatedAnswers);
-  };
-
-  const quizQuestions = quizData.arraysQuizData;
-
-  const handleSubmit = () => {
-    setShowResults(true);
-  };
-
   // console.log("number 2", quizData);
 
   return (
     <div>
-      <h2>{quizName}</h2>
-      {/* ADDED */}
+      {/* <h2>{quizName}</h2> */}
+    
       <p>THIS IS A TEST</p>
-
-      {/* <ul>
-      {quizData.arraysQuizData.map((question, questionIndex) => (
-          <li key={questionIndex}>
-            <h3>{question.question}</h3>
-            <ul>
-              {question.choices.map((choice, choiceIndex) => (
-                <li key={choiceIndex}>
-                  <label>
-                    <input
-                      type="radio"
-                      name={`question-${questionIndex}`}
-                      value={choiceIndex}
-                      onChange={() => handleAnswerSelect(questionIndex, choiceIndex)}
-                    />
-                    {choice}
-                  </label>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>  */}
-       <button onClick={handleSubmit}>Submit</button>
-      {showResults && (
-        <div>
-          <h3>Results:</h3>
-          <ul>
-            {quizData.arraysQuizData.map((question, questionIndex) => (
-              <li key={questionIndex}>
-                Question {questionIndex + 1}: {answers[questionIndex] === question.correctChoice ? "Correct" : "Incorrect"}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
+      <div className='app'>
+   {/* HINT: replace "false" with logic to display the 
+      score when the user has answered all the questions */}
+   {false ? (
+    <div className='score-section'>You scored 1 out of {arraysQuizData.length}</div>
+   ) : (
+    <>
+     <div className='question-section'>
+      <div className='question-count'>
+       <span>Question 1</span>/{arraysQuizData.length}
+      </div>
+      <div className='question-text'>This is where the question text should go</div>
+     </div>
+     <div className='answer-section'>
+      <button>Answer 1</button>
+      <button>Answer 2</button>
+      <button>Answer 3</button>
+      <button>Answer 4</button>
+     </div>
+    </>
+   )}
+  </div>
+</div>
   );
 };
 
-export default Quiz;
+
