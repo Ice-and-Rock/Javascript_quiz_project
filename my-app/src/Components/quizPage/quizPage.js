@@ -82,8 +82,8 @@ export default function Quiz({ quizName }) {
   };
 
   return (
-    <div>
-      <div className="quiz">
+    <div id="quizFont">
+      <div className="quiz" >
         {showScore ? (
           <div className="score-section">
             {" "}
@@ -105,7 +105,7 @@ export default function Quiz({ quizName }) {
                 <span>Question {currentQuestion + 1}</span>/
                 {arraysQuizData.length}
               </div>
-              <h2> {quizName}</h2>
+              <h2 className="question-text"> {quizName}</h2>
               <div className="question-text">
                 {" "}
                 {arraysQuizData[currentQuestion].questionText}
