@@ -119,7 +119,7 @@ export default function Quiz({ quizName }) {
               */}
 
               {arraysQuizData[currentQuestion].codeSnippet && (
-                <div>{arraysQuizData[currentQuestion].codeSnippet}</div>
+                <div id="snippet" className="answer-section">{arraysQuizData[currentQuestion].codeSnippet}</div>
               )}
             </div>
 

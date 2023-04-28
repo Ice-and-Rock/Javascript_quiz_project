@@ -43,6 +43,8 @@
     display: flex;
     font-size: 24px;
     align-items: center;
+    font-family: "din-round",sans-serif, Verdana, cursive, sans-serif;
+    color: #ebebeb;
   }
   
   /* QUESTION/TIMER/LEFT SECTION */
@@ -61,7 +63,13 @@
     font-size: 28px;
     color: #ebebeb;
   }
-  
+
+  /* make this into italics */
+  #snippet {
+    font-style: italic;
+    
+  }
+
   .question-text {
     margin-bottom: 12px;
     color: #ebebeb;
@@ -83,6 +91,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #ebebeb;
   }
   
   button {
