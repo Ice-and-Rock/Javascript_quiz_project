@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import variablesQuizData from "./Data/variables_questions.json";
-import arraysQuizData from "./Data/arrays_questions.json";
-import functionsQuizData from "./Data/functions_questions.json";
+import variablesQuizData from "./Data/v3variables_questions.js";
+import arraysQuizData from "./Data/v3arrays_questions.js";
+import functionsQuizData from "./Data/v3functions_questions.js";
 import NavBar from "./Components/NavBar/NavBar";
 import Quiz from "./Components/quizPage/quizPage";
 import "./index.css";
@@ -13,18 +13,36 @@ import "./Components/NavBar/navBar.css";
 import "./Components/quizPage/quizPage.css";
 import "./Components/buttons/buttons.css";
 
+// import the data for the quiz -----------------------------------------------
+  // import variablesQuizData from "./Data/variables_questions.js"; ✅
+  // import arraysQuizData from "./Data/arrays_questions.js"; ✅
+  // import functionsQuizData from "./Data/functions_questions.js"; ✅
+
+
+// set the variables for the quizName and quizData ---------------------------
 function App() {
-  const [quizData, setQuizData] = useState(variablesQuizData);
+
+  // set the quizName to a default value of 'Variables Quiz' -----------------
   const [quizName, setQuizName] = useState("Variables Quiz");
 
-  const changeQuizDatahandler = (data, quizName) => {
-    setQuizData(data);
+  // set a quizData variable to change depending on the quizName -------------
+    // when quizName is 'variables Quiz' then quizData is variablesQuizData
+    // when quizName is 'arrays Quiz' then quizData is arraysQuizData
+    // when quizName is 'functions Quiz' [default] 
+  let quizData;
+  if (quizName === "Variables Quiz") {
+    quizData = variablesQuizData ;
+  } else if (quizName === "Arrays Quiz") {
+    quizData = arraysQuizData ;
+  } else {
+    quizData = functionsQuizData ;
+  }
+
+  // Changes the quiz data and quiz name when called -------------------------
+  const changeQuizData = (quizName) => {
     setQuizName(quizName);
   };
 
-  // quizdata1 obj
-  // quizdata2 obj
-  // quizdata3 obj
 
   return (
     <>
@@ -55,9 +73,7 @@ function App() {
               efficient, organized, and easier to understand.
               <button
                 value="Variables Quiz"
-                onClick={() =>
-                  changeQuizDatahandler(variablesQuizData, "Variables")
-                }
+                onClick={() => setQuizName("Variables Quiz")}
               >
                 Variables{" "}
               </button>
@@ -83,9 +99,7 @@ function App() {
               elements' indices directly.
               <button
                 value="Arrays Quiz"
-                onClick={() =>
-                  changeQuizDatahandler(variablesQuizData, "Arrays")
-                }
+                onClick={() => setQuizName("Arrays Quiz")}
               >
                 Arrays{" "}
               </button>
@@ -98,7 +112,6 @@ function App() {
               alt=""
             />{" "}
             <p>
-              {" "}
               JavaScript functions are reusable blocks of code that perform a
               specific task. They can accept inputs called parameters and return
               values that can be used in other parts of the program. Functions
@@ -109,9 +122,7 @@ function App() {
               repetition, making it easier to maintain and scale.
               <button
                 value="Functions Quiz"
-                onClick={() =>
-                  changeQuizDatahandler(variablesQuizData, "Functions")
-                }
+                onClick={() => setQuizName("Functions Quiz")}
               >
                 Functions{" "}
               </button>
