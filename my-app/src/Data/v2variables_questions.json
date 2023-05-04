@@ -1,0 +1,55 @@
+{
+    "variablesQuizData": [
+      {
+        "questionText": "What is a variable in JavaScript?",
+        "options": [
+          {"optionText": "A reserved keyword to declare a value", "isCorrect": false},
+          {"optionText": "A container to store values or data", "isCorrect": true},
+          {"optionText": "An object that holds key-value pairs", "isCorrect": false},
+          {"optionText": "A built-in function to perform a specific task", "isCorrect": false}
+        ]
+      },
+      {
+        "questionText": "Which keyword is used to declare a variable?",
+        "options": [
+          {"optionText": "var", "isCorrect": true},
+          {"optionText": "let", "isCorrect": true},
+          {"optionText": "const", "isCorrect": true},
+          {"optionText": "all of the above", "isCorrect": false}
+        ]
+      },
+      {
+        "questionText": "What is the difference between let and var in JavaScript?",
+        "options": [
+          {"optionText": "let is used to declare a constant value, while var is used for variables", "isCorrect": false},
+          {"optionText": "let and var are interchangeable and can be used interchangeably", "isCorrect": false},
+          {"optionText": "var has function scope and let has block scope", "isCorrect": true},
+          {"optionText": "let is used to declare global variables, while var is used for local variables", "isCorrect": false}
+        ]
+      },
+      {
+        "questionText": "Which of the following is NOT a valid variable name in JavaScript?",
+        "options": [
+          {"optionText": "my_variable", "isCorrect": false},
+          {"optionText": "myVariable", "isCorrect": false},
+          {"optionText": "my-Variable", "isCorrect": true},
+          {"optionText": "myVariable123", "isCorrect": false}
+        ]
+      },
+      {
+        "questionText": "What is the value of a variable that has been declared but not initialized?",
+        "options": [
+          {"optionText": "undefined", "isCorrect": true},
+          {"optionText": "null", "isCorrect": false},
+          {"optionText": "0", "isCorrect": false},
+          {"optionText": "NaN", "isCorrect": false}
+        ]
+      }
+    ]
+  }
+  
+  
+  
+  
+  
+  
