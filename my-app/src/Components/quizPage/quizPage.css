@@ -16,6 +16,7 @@
   #quizFont {
     font-family: "din-round",sans-serif, Verdana, cursive, sans-serif;
     color: #ebebeb;
+    
   }
   
   body {
@@ -29,14 +30,16 @@
   .quiz {
     background-color: #252d4a;
     width: 450px;
-    min-height: 200px;
-    height: min-content;
+    height: 300px;
+    /* height: min-content; */
     border-radius: 15px;
     padding: 20px;
     box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: space-evenly;
     margin: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
   }
   
   .score-section {
@@ -106,6 +109,8 @@
     align-items: center;
     border: 5px solid #234668;
     cursor: pointer;
+    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+
   }
   
   button:hover {
