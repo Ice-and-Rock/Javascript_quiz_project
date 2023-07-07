@@ -1,3 +1,10 @@
+.HomePage {
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}  
+  
 body {
   margin: 0;
   font-family: din-round,sans-serif,-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -20,13 +27,17 @@ body {
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width:100%;
 }
 
 .NavBar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  width: 100%;
+  margin:20px;
+  margin-top: 0;
   background-color: #4c606d;
 }
 
@@ -39,6 +50,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 
 .row-container {
@@ -58,5 +70,5 @@ header {
 }
 
 #main-page-heading {
-  margin: auto;
+  margin: 30px
 }
