@@ -14,28 +14,26 @@ import "./Components/quizPage/quizPage.css";
 import "./Components/buttons/buttons.css";
 
 // import the data for the quiz -----------------------------------------------
-  // import variablesQuizData from "./Data/variables_questions.js"; ✅
-  // import arraysQuizData from "./Data/arrays_questions.js"; ✅
-  // import functionsQuizData from "./Data/functions_questions.js"; ✅
-
+// import variablesQuizData from "./Data/variables_questions.js"; ✅
+// import arraysQuizData from "./Data/arrays_questions.js"; ✅
+// import functionsQuizData from "./Data/functions_questions.js"; ✅
 
 // set the variables for the quizName and quizData ---------------------------
 function App() {
-
   // set the quizName to a default value of 'Variables Quiz' -----------------
   const [quizName, setQuizName] = useState("Variables Quiz");
 
   // set a quizData variable to change depending on the quizName -------------
-    // when quizName is 'variables Quiz' then quizData is variablesQuizData
-    // when quizName is 'arrays Quiz' then quizData is arraysQuizData
-    // when quizName is 'functions Quiz' [default] 
+  // when quizName is 'variables Quiz' then quizData is variablesQuizData
+  // when quizName is 'arrays Quiz' then quizData is arraysQuizData
+  // when quizName is 'functions Quiz' [default]
   let quizData;
   if (quizName === "Variables Quiz") {
-    quizData = variablesQuizData ;
+    quizData = variablesQuizData;
   } else if (quizName === "Arrays Quiz") {
-    quizData = arraysQuizData ;
+    quizData = arraysQuizData;
   } else {
-    quizData = functionsQuizData ;
+    quizData = functionsQuizData;
   }
 
   // Changes the quiz data and quiz name when called -------------------------
@@ -43,12 +41,10 @@ function App() {
     setQuizName(quizName);
   };
 
-
   return (
-    <>
-      <header className="NavBar">
-        <NavBar />
-      </header>
+    <div className="HomePage">
+
+      <NavBar />
 
       <body className="App">
         <div className="container">
@@ -71,6 +67,7 @@ function App() {
               sign (=) and can be referenced and manipulated throughout the
               code. Proper use of variables makes JavaScript code more
               efficient, organized, and easier to understand.
+              {" "}
               <button
                 value="Variables Quiz"
                 onClick={() => setQuizName("Variables Quiz")}
@@ -97,6 +94,7 @@ function App() {
               Operations such as adding, removing, or accessing elements can be
               performed using built-in array methods or by referencing the
               elements' indices directly.
+              {" "}
               <button
                 value="Arrays Quiz"
                 onClick={() => setQuizName("Arrays Quiz")}
@@ -120,6 +118,7 @@ function App() {
               code inside the function is executed, and the result is returned
               to the caller. Functions make code modular and help reduce
               repetition, making it easier to maintain and scale.
+              {" "}
               <button
                 value="Functions Quiz"
                 onClick={() => setQuizName("Functions Quiz")}
@@ -134,7 +133,7 @@ function App() {
       <quizQuestions className="Quiz">
         <Quiz quizData={quizData} quizName={quizName} />
       </quizQuestions>
-    </>
+    </div>
   );
 }
 
