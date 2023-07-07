@@ -37,9 +37,13 @@ function App() {
   }
 
   // Changes the quiz data and quiz name when called -------------------------
-  const changeQuizData = (quizName) => {
-    setQuizName(quizName);
-  };
+  // + Commented out for Netlify build
+  
+  // const changeQuizData = (quizName) => {
+  //   setQuizName(quizName);
+  // };
+
+
 
   return (
     <div className="HomePage">
